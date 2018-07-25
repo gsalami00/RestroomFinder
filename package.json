@@ -1,5 +1,5 @@
 {
-  "name": "testing",
+  "name": "restroom-finder",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
