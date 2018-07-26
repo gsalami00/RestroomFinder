@@ -1,7 +1,8 @@
 import {
   FormLabel,
   FormInput,
-  FormValidationMessage
+  FormValidationMessage,
+  Button
 } from "react-native-elements";
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
@@ -15,21 +16,21 @@ export default class AddRestroom extends Component {
       <View style={styles.container}>
         <FormLabel>Name of Establishment</FormLabel>
         <FormInput onChangeText={this.handleChange} />
-        <FormValidationMessage>
+        {/* <FormValidationMessage>
           {"This field is required."}
-        </FormValidationMessage>
+        </FormValidationMessage> */}
 
         <FormLabel>Image URL</FormLabel>
         <FormInput onChangeText={this.handleChange} />
-        <FormValidationMessage>
+        {/* <FormValidationMessage>
           {"This field is required."}
-        </FormValidationMessage>
+        </FormValidationMessage> */}
 
         <FormLabel>Address</FormLabel>
         <FormInput onChangeText={this.handleChange} />
-        <FormValidationMessage>
+        {/* <FormValidationMessage>
           {"This field is required."}
-        </FormValidationMessage>
+        </FormValidationMessage> */}
 
         <FormLabel>General Schedule</FormLabel>
 
@@ -220,6 +221,8 @@ export default class AddRestroom extends Component {
           <Picker.Item label="3 - Great" value="4" />
           <Picker.Item label="5 - Excellent" value="5" />
         </Picker>
+
+        <Button title="Submit" />
       </View>
     );
   }
@@ -229,52 +232,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    alignItems: "center",
+    // alignItems: "center",
     justifyContent: "center"
   },
   pickerText: {
     color: "black"
-  },
-  dropdown: {
-    // flex: 1,
-    // top: 32,
-    // left: 8,
-    // alignSelf: "flex-end",
-    // marginTop: 32,
-    // right: 8,
-    // borderWidth: 0
-    width: 150,
-    height: 300
-    // borderWidth: ,
-    // borderRadius: 3
-  },
-  dropdown_text: {
-    marginVertical: 10,
-    marginHorizontal: 6,
-    fontSize: 14,
-    color: "black",
-    textAlign: "center",
-    textAlignVertical: "center"
-  },
-  dropdown_style: {
-    width: 150,
-    borderWidth: 2,
-    borderRadius: 3
-  },
-  dropdown_image: {
-    marginLeft: 4,
-    width: 30,
-    height: 30
-  },
-  dropdown_row_text: {
-    marginHorizontal: 4,
-    fontSize: 16,
-    color: "navy",
-    textAlignVertical: "center"
-  },
-  dropdown_separator: {
-    height: 1,
-    backgroundColor: "cornflowerblue"
   }
 });
-
