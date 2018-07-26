@@ -6,8 +6,6 @@ import {
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { Picker } from "react-native-picker-dropdown";
-import { Dropdown } from "react-native-material-dropdown";
-import ModalDropdown from "react-native-modal-dropdown";
 
 export default class AddRestroom extends Component {
   onValueChange() {}
@@ -34,17 +32,12 @@ export default class AddRestroom extends Component {
         </FormValidationMessage>
 
         <FormLabel>General Schedule</FormLabel>
-        <ModalDropdown
-          style={styles.dropdown}
-          textStyle={styles.dropdown_text}
-          dropdownStyle={styles.dropdown_style}
-          options={["option 1", "option 2"]}
-        />
-        {/* <FormLabel>Opens</FormLabel>
+
+        <FormLabel>Opens</FormLabel>
         <Picker
           // selectedValue={this.state.hours}
           // onValueChange={this.onValueChange}
-          mode="dialog"
+          mode="dropdown"
         >
           <Picker.Item label="-- Select One --" />
           <Picker.Item label="7:00 am" value="7:00 am" />
@@ -198,19 +191,27 @@ export default class AddRestroom extends Component {
 
           <Picker.Item label="6:00 am" value="6:00 am" />
           <Picker.Item label="6:30 am" value="6:30 am" />
-        </Picker> */}
-
-        <FormLabel>Daily Schedule</FormLabel>
-        <FormInput onChangeText={this.handleChange} />
+        </Picker>
 
         <FormLabel>Average Wait Time</FormLabel>
-        <FormInput onChangeText={this.handleChange} />
+        <Picker
+          // selectedValue={this.state.hours}
+          // onValueChange={this.onValueChange}
+          mode="dropdown"
+        >
+          <Picker.Item label="-- Select One --" />
+          <Picker.Item label="5+ minutes" value="5+ minutes" />
+          <Picker.Item label="10+ minutes" value="10+ minutes" />
+          <Picker.Item label="15+ minutes" value="15+ minutes" />
+          <Picker.Item label="20+ minutes" value="20+ minutes" />
+          <Picker.Item label="25+ minutes" value="25+ minutes" />
+        </Picker>
 
         <FormLabel>Rating</FormLabel>
         <Picker
           // selectedValue={this.state.hours}
           // onValueChange={this.onValueChange}
-          mode="dialog"
+          mode="dropdown"
         >
           <Picker.Item label="-- Select One --" />
           <Picker.Item label="1 - Just No" value="1" />
@@ -254,6 +255,11 @@ const styles = StyleSheet.create({
     color: "black",
     textAlign: "center",
     textAlignVertical: "center"
+  },
+  dropdown_style: {
+    width: 150,
+    borderWidth: 2,
+    borderRadius: 3
   },
   dropdown_image: {
     marginLeft: 4,
