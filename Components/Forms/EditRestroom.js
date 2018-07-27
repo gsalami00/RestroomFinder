@@ -15,7 +15,7 @@ export default class EditRestroom extends Component {
     return (
       <View style={styles.container}>
         <FormLabel>Name of Establishment</FormLabel>
-        <FormInput onChangeText={this.handleChange} />
+        <FormInput onChangeText={this.handleChange} defaultValue="HEY"/>
         {/* <FormValidationMessage>
           {"This field is required."}
         </FormValidationMessage> */}
