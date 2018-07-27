@@ -32,6 +32,7 @@
     "express-session": "^1.15.6",
     "passport": "^0.4.0",
     "passport-google-oauth": "^1.0.0",
+    "path": "^0.12.7",
     "pg": "^7.4.3",
     "react": "^16.3.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-28.0.0.tar.gz",
@@ -42,8 +43,10 @@
     "react-native-picker-dropdown": "^0.1.1",
     "react-native-picker-select": "^4.0.0",
     "react-redux": "^5.0.7",
+    "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "sequelize": "^4.38.0",
+    "volleyball": "^1.5.1",
     "watchman": "^1.0.0"
   },
   "description": "This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).",

@@ -10,6 +10,7 @@ const Restroom = db.define("restroom", {
     allowNull: false,
     validate: {
       len: [1, 250]
+
     }
   },
   name: {
