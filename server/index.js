@@ -1,6 +1,6 @@
 'use strict'
 
-const {db} = require('./models/db')
+const db = require('./models/db')
 const express = require('express')
 const path = require('path')
 const volleyball = require('volleyball')
@@ -14,9 +14,7 @@ app.use(volleyball)
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 
-app.use('/api', (req,res,next)=>{
-    res.send('hello')
-})
+app.use('/api',require('./api'))
 
 db.sync()
     .then(()=>{

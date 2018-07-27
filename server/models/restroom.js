@@ -20,13 +20,13 @@ const Restroom = db.define('restroom',{
         }
     },
     hours: {
-        type: Sequelize.ARRAY(Sequelize.STRING)
+        type: Sequelize.STRING
     },
     waitTime : {
         type: Sequelize.STRING
     },
     phone: {
-        type : Sequelize.NUMBER
+        type : Sequelize.INTEGER
     },
     menu : {
         type : Sequelize.TEXT
