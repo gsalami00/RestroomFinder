@@ -1,13 +1,13 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import SignUp from "./Components/Forms/SignUp";
-import AddRestroom from "./Components/Forms/AddRestroom";
+import EditRestroom from "./Components/Forms/EditRestroom";
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <AddRestroom />
+        <EditRestroom />
         {/* <SignUp /> */}
       </View>
     );
